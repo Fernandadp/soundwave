@@ -1,76 +1,89 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
     <title>Soundwave</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="main.css">
 </head>
 
 <body>
     <nav>
-        <a href="">
+        <a href="#landing" class="logo">
             <img id="logo" src="./soundwave-logo.png" alt="soundwave logo">
             <p>Soundwave</p>
         </a>
-        <a href="">Discover</a>
-        <a href="">Join</a>
+        <div class="navigation">
+            <ul>
+                <li>
+                    <a href="#discover">Discover</a>
+
+                </li>
+                <li>
+                    <a href="#join">Join</a>
+                </li>
+            </ul>
+        </div>
     </nav>
 
     <main>
 
         <div id="landing">
             <img src="landing-page-girl.png" alt="woman listening music">
-            <h1>Feel The Music</h1>
-            <h3>Stream over 20 thousand songs with one click</h3>
-            <button>Join Now</button>
+
+            <div class="text">
+                <h1>Feel The Music</h1>
+                <h3>Stream over 20 thousand songs with one click</h3>
+                <button>Join Now</button>
+            </div>
+
         </div>
 
         <div id="discover">
             <section>
                 <h1>Discover new music</h1>
                 <div class="card">
-                    <img src="microphone.svg">
+                    <img src="microphone.svg" alt="microphone icon">
                     <p>Charts</p>
                 </div>
                 <div class="card">
-                    <img src="albums.svg">
+                    <img src="albums.svg" alt="album icon">
                     <p>Albums</p>
                 </div>
                 <div class="cards">
-                    <img src="more.svg">
+                    <img src="more.svg" alt="more arrows icon">
                     <p>More</p>
                 </div>
             </section>
             <section>
-                <img src="albums.svg">
+                <img src="albums.svg" alt="albums covers">
             </section>
         </div>
-        
+
         <div id="join">
             <h1>Join the fun.</h1>
             <form>
                 <label for="name">Name</label>
-                <input type="text" name="Name">                
-                <label for="Email">Email</label>
-                <input type="text" name="Email">                
-                <label for="Password">Password</label>
-                <input type="text" name="Password">
+                <input type="text" name="Name" id="name"> 
+                <label for="email">Email</label>
+                <input type="text" name="Email" id="email">
+                <label for="password">Password</label>
+                <input type="text" name="Password" id="password">
                 <button type="submit">Join Now</button>
             </form>
         </div>
 
     </main>
-    
+
     <footer>
         <div>
             <a href="">About us</a>
             <a href="">Contact</a>
-        </div>        
+        </div>
         <div>
-            <a href=""><img src="twitter.svg">Twitter</a>
-            <a href=""><img src="facebook.svg">Facebook</a>
+            <a href=""><img src="twitter.svg" alt="twitter icon">Twitter</a>
+            <a href=""><img src="facebook.svg" alt="facebook icon">Facebook</a>
         </div>
     </footer>
 
-</body>
-
-</html>
+</body></html>
