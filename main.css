@@ -1,14 +1,16 @@
 body {
     background-color: #242D43;
-    padding: 30px 125px;
     color: white;
     font-family: 'Poppins', sans-serif;
     font-weight: 300;
+    margin: 0;
 }
 
+a,
 a:visited,
 a:active {
     color: white;
+    text-decoration: none;
 }
 
 h1,
@@ -32,13 +34,13 @@ p {
 nav {
     display: flex;
     justify-content: space-between;
+    padding: 30px 125px;
 }
 
 .logo {
     width: 50%;
     display: flex;
     font-size: 24px;
-    text-decoration: none;
 }
 
 #logo {
@@ -68,7 +70,7 @@ nav {
     display: flex;
     justify-content: space-between;
     height: 90vh;
-    margin: 110px 0;
+    padding: 14px 125px;
 }
 
 #landing img {
@@ -185,3 +187,20 @@ form label {
     font-size: 96px;
     color: #BC3A80;
 }
+
+footer {
+    display: flex;
+    justify-content: space-between;
+    background-color: #202027;
+    padding: 20px 125px;
+}
+
+footer a {
+    font-size: 24px;
+    margin-right: 25px;
+}
+
+footer img {
+    margin-right: 10px;
+}
+
