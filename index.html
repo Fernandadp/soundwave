@@ -8,23 +8,25 @@
 </head>
 
 <body>
-    <nav>
-        <a href="#landing" class="logo">
-            <img id="logo" src="./soundwave-logo.png" alt="soundwave logo">
-            <p>Soundwave</p>
-        </a>
-        <div class="navigation">
-            <ul>
-                <li>
-                    <a href="#discover">Discover</a>
+    <header>
+        <nav>
+            <a href="#landing" class="logo" onclick="toggleDiv('landing')">
+                <img id="logo" src="./soundwave-logo.png" alt="soundwave logo">
+                <p>Soundwave</p>
+            </a>
+            <div class="navigation">
+                <ul>
+                    <li>
+                        <a href="#discover" onclick="toggleDiv('discover')">Discover</a>
 
-                </li>
-                <li>
-                    <a href="#join">Join</a>
-                </li>
-            </ul>
-        </div>
-    </nav>
+                    </li>
+                    <li>
+                        <a href="#join" onclick="toggleDiv('join')">Join</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </header>
 
     <main>
 
@@ -36,7 +38,10 @@
                 <h3>Stream over 20 thousand songs with one click</h3>
                 <button class="submit">Join Now</button>
             </div>
-
+            
+            <div class="circle-1"></div>
+            <div class="circle-2"></div>
+            <div class="circle-3"></div>
         </div>
 
         <div id="discover">
@@ -91,4 +96,8 @@
         </div>
     </footer>
 
-</body></html>
+    <script src="main.js" type="text/javascript"></script>
+
+</body>
+
+</html>

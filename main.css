@@ -4,6 +4,7 @@ body {
     font-family: 'Poppins', sans-serif;
     font-weight: 300;
     margin: 0;
+    min-height: 100wh;
 }
 
 a,
@@ -69,8 +70,8 @@ nav {
 #join {
     display: flex;
     justify-content: space-between;
-    height: 90vh;
-    padding: 14px 125px;
+    padding: 0 125px;
+    flex-grow: 1;
 }
 
 #landing img {
@@ -78,17 +79,12 @@ nav {
     max-height: 849px;
 }
 
-#landing,
-#discover {
-    display: none;
-}
-
 .text {
     width: 50%;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
-    padding: 160px 30px;
+    padding: 160px 30px 0;
 }
 
 .text h3 {
@@ -103,6 +99,42 @@ nav {
     height: 90px;
     border-radius: 10px;
     border: none;
+}
+
+.circle-1 {
+    position: absolute;
+    width: 20vw;
+    height: 20vw;
+    border-radius: 50%;
+    background-color: #BC3A80;
+    opacity: 0.1;
+    bottom: 3vw;
+    left: 3vw;
+    z-index: -1;
+}
+
+.circle-2 {
+    position: absolute;
+    width: 12vw;
+    height: 12vw;
+    border-radius: 50%;
+    background-color: #176287;
+    opacity: 0.1;
+    top: 6vw;
+    left: 32vw;
+    z-index: -1;
+}
+
+.circle-3 {
+    position: absolute;
+    width: 25vw;
+    height: 25vw;
+    border-radius: 50%;
+    background-color: #176287;
+    opacity: 0.1;
+    bottom: -5vw;
+    right: -5vw;
+    z-index: -1;
 }
 
 #discover section {
@@ -204,3 +236,8 @@ footer img {
     margin-right: 10px;
 }
 
+#discover,
+#join,
+footer {
+    display: none;
+}
