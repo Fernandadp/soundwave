@@ -4,7 +4,6 @@ body {
     font-family: 'Poppins', sans-serif;
     font-weight: 300;
     margin: 0;
-    min-height: 100wh;
 }
 
 a,
@@ -35,6 +34,7 @@ p {
 nav {
     display: flex;
     justify-content: space-between;
+    align-items: center;
     padding: 30px 125px;
 }
 
@@ -70,35 +70,13 @@ nav {
 #join {
     display: flex;
     justify-content: space-between;
-    padding: 0 125px;
-    flex-grow: 1;
+    height: 90vh;
+    padding: 14px 125px;
 }
 
 #landing img {
     max-width: 602px;
     max-height: 849px;
-}
-
-.text {
-    width: 50%;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    padding: 160px 30px 0;
-}
-
-.text h3 {
-    margin: 70px 0;
-}
-
-.submit {
-    background-color: #213978;
-    font-size: 24px;
-    color: white;
-    width: 235px;
-    height: 90px;
-    border-radius: 10px;
-    border: none;
 }
 
 .circle-1 {
@@ -108,7 +86,7 @@ nav {
     border-radius: 50%;
     background-color: #BC3A80;
     opacity: 0.1;
-    bottom: 3vw;
+    bottom: 5vw;
     left: 3vw;
     z-index: -1;
 }
@@ -127,14 +105,48 @@ nav {
 
 .circle-3 {
     position: absolute;
+    overflow: hidden;
     width: 25vw;
     height: 25vw;
+    opacity: 0.1;
+    bottom: 0;
+    right: 0;
+    z-index: -1;
+    background-color: #176287;
+    border-radius: 50%
+}
+
+/*
+.circle-3::before {
+    content: '';
+    position: absolute;
+    height: 100%;
+    width: 100%;
     border-radius: 50%;
     background-color: #176287;
-    opacity: 0.1;
-    bottom: -5vw;
-    right: -5vw;
-    z-index: -1;
+}
+*/
+
+.text {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    padding: 160px 30px;
+}
+
+.text h3 {
+    margin: 70px 0;
+}
+
+.submit {
+    background-color: #213978;
+    font-size: 24px;
+    color: white;
+    width: 235px;
+    height: 90px;
+    border-radius: 10px;
+    border: none;
 }
 
 #discover section {
@@ -168,7 +180,7 @@ section.covers img {
 }
 
 .card img {
-    widows: inherit;
+    width: inherit;
     margin: 32px 60px;
 }
 
@@ -236,8 +248,139 @@ footer img {
     margin-right: 10px;
 }
 
+#landing,
 #discover,
-#join,
 footer {
     display: none;
+}
+
+@media screen and (max-width: 767px) {
+
+    h1 {
+        font-size: 2.5em;
+    }
+
+    h3 {
+        font-size: 1.5em;
+    }
+
+    p {
+        font-size: 1.5em;
+    }
+
+    .circle-1,
+    .circle-2,
+    .circle-3 {
+        display: none;
+    }
+
+    #landing,
+    #discover,
+    #join {
+        flex-direction: column-reverse;
+        justify-content: space-between;
+        height: auto;
+        width: 90vw;
+        padding: 50px 20px;
+        margin: 0;
+    }
+
+    #landing img {
+        max-width: 80%;
+    }
+
+    .text {
+        width: 100%;
+        justify-content: center;
+        align-items: center;
+        padding: 0;
+        margin-bottom: 50px;
+        text-align: center;
+    }
+
+    .text h3 {
+        margin: 40px 0;
+    }
+
+    .submit {
+        font-size: 18px;
+        color: white;
+        width: 100%;
+        height: 50px;
+    }
+
+    #discover,
+    #join {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    #discover section {
+        width: 100%;
+        text-align: center;
+    }
+
+    section.covers {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    section.covers img {
+        width: 90%
+    }
+
+    .cards {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        margin: 0;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .card {
+        background-color: #202027;
+        width: 30%;
+        height: inherit;
+        text-align: center;
+        border: none;
+        padding: 20px 20px 0;
+        margin: 20px;
+    }
+
+    .card img {
+        width: 80%;
+        margin: 0px;
+    }
+
+    .form {
+        width: 100%;
+    }
+
+    form {
+        font-size: 18px;
+        padding: 20px 30px;
+    }
+
+    form input {
+        height: 30px;
+        margin-bottom: 20px;
+    }
+
+    form label {
+        margin-bottom: 20px;
+    }
+
+    #join .submit {
+        width: 100%;
+        height: 40px;
+        margin-top: 20px;
+    }
+
+    #join h1 {
+        font-weight: bold;
+        margin-top: 50px;
+    }
 }
