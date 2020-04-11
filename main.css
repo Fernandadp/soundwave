@@ -109,14 +109,13 @@ nav {
     width: 25vw;
     height: 25vw;
     opacity: 0.1;
-    bottom: 0;
-    right: 0;
+    bottom: -5vw;
+    right: -5vw;
     z-index: -1;
     background-color: #176287;
     border-radius: 50%
 }
 
-/*
 .circle-3::before {
     content: '';
     position: absolute;
@@ -125,7 +124,6 @@ nav {
     border-radius: 50%;
     background-color: #176287;
 }
-*/
 
 .text {
     width: 50%;
@@ -248,11 +246,13 @@ footer img {
     margin-right: 10px;
 }
 
+/*
 #landing,
 #discover,
 footer {
     display: none;
 }
+*/
 
 @media screen and (max-width: 767px) {
 
