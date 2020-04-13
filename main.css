@@ -1,9 +1,18 @@
+html {
+    min-height: 100%
+}
+
 body {
+    position: relative;
     background-color: #242D43;
     color: white;
     font-family: 'Poppins', sans-serif;
     font-weight: 300;
     margin: 0;
+    min-height: 100vh;
+    width: 100vw;
+    overflow-x: hidden;
+
 }
 
 a,
@@ -31,6 +40,10 @@ p {
     font-size: 30px;
 }
 
+header {
+    max-width: 100%;
+}
+
 nav {
     display: flex;
     justify-content: space-between;
@@ -53,16 +66,22 @@ nav {
     width: 50%;
 }
 
-.navigation ul {
+.navigation ul,
+#mobileMenu {
     display: flex;
     justify-content: flex-end;
     list-style-type: none;
 }
 
-.navigation ul li a {
+.navigation ul li a,
+.mobileLink a {
     margin: 0 60px;
     font-size: 24px;
     text-decoration: none;
+}
+
+main {
+    padding-bottom: 75px;
 }
 
 #landing,
@@ -75,8 +94,7 @@ nav {
 }
 
 #landing img {
-    max-width: 602px;
-    max-height: 849px;
+    object-fit: contain;
 }
 
 .circle-1 {
@@ -105,20 +123,19 @@ nav {
 
 .circle-3 {
     position: absolute;
-    overflow: hidden;
     width: 25vw;
     height: 25vw;
+    border-radius: 50%;
     opacity: 0.1;
-    bottom: -5vw;
-    right: -5vw;
+    bottom: 0;
+    right: 0;
     z-index: -1;
-    background-color: #176287;
-    border-radius: 50%
 }
 
 .circle-3::before {
     content: '';
     position: absolute;
+    /*    transform: translate(40%, 40%);*/
     height: 100%;
     width: 100%;
     border-radius: 50%;
@@ -149,6 +166,7 @@ nav {
 
 #discover section {
     width: 50%;
+    min-width: 700px;
 }
 
 section.covers {
@@ -234,7 +252,11 @@ footer {
     display: flex;
     justify-content: space-between;
     background-color: #202027;
-    padding: 20px 125px;
+    padding: 20px 95px;
+    margin-top: 50px;
+    position: absolute;
+    bottom: 0;
+    max-width: 100%;
 }
 
 footer a {
@@ -246,32 +268,125 @@ footer img {
     margin-right: 10px;
 }
 
-/*
 #landing,
 #discover,
-footer {
+.hamburguerMenu,
+ul#mobileMenu {
     display: none;
 }
-*/
 
-@media screen and (max-width: 767px) {
+@media screen and (min-width: 992px) and (max-width: 1650px) {
 
+    #discover,
+    #join {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #landing img,
+    #landing .text {
+        max-width: 40%;
+    }
+
+    .text {
+        justify-content: flex-start;
+        padding: 80px 30px;
+    }
+
+    .text h3 {
+        margin: 50px 0;
+    }
+
+    #discover section {
+        justify-content: center;
+    }
+
+    #join h1 {
+        margin: 0px;
+    }
+
+    #join .form {
+        min-width: 600px;
+    }
+
+    .hamburguerMenu,
+    ul#mobileMenu {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 991px) {
     h1 {
-        font-size: 2.5em;
+        font-size: 3.5em;
     }
 
     h3 {
-        font-size: 1.5em;
+        font-size: 2em;
     }
 
     p {
         font-size: 1.5em;
     }
 
-    .circle-1,
-    .circle-2,
-    .circle-3 {
+    header {
+        max-width: 100%;
+        padding: 30px 10%;
+    }
+
+    nav {
+        padding: 0;
+    }
+
+    .menuLink {
         display: none;
+    }
+
+    .hamburguerMenu {
+        display: block;
+    }
+
+    .mobile-menu {
+        display: block;
+    }
+
+    #mobileMenu {
+        height: 100%;
+        background-color: #213978;
+        border-radius: 10px;
+    }
+
+    .mobileLink {
+        padding: 20px 0;
+    }
+
+    .hamburguerMenu.open #linea-1 {
+        transform: rotate(40deg) translate(7px, 10px);
+        transition: all .1s ease-in-out;
+    }
+
+    .hamburguerMenu.open #linea-2 {
+        opacity: 0;
+    }
+
+    .hamburguerMenu.open #linea-3 {
+        transform: rotate(-40deg) translate(7px, -10px);
+        transition: all .1s ease-in-out;
+    }
+
+    .linea {
+        margin-top: 10px;
+        width: 30px;
+        height: 2px;
+        border-radius: 10px;
+        background: white;
+    }
+
+    .logo {
+        width: auto;
+    }
+
+    .logo p {
+        font-size: 24px;
     }
 
     #landing,
@@ -279,17 +394,18 @@ footer {
     #join {
         flex-direction: column-reverse;
         justify-content: space-between;
+        align-items: center;
         height: auto;
-        width: 90vw;
         padding: 50px 20px;
         margin: 0;
     }
 
     #landing img {
-        max-width: 80%;
+        max-width: 60%;
+        object-position: bottom;
     }
 
-    .text {
+    #landing .text {
         width: 100%;
         justify-content: center;
         align-items: center;
@@ -305,8 +421,123 @@ footer {
     .submit {
         font-size: 18px;
         color: white;
-        width: 100%;
+        width: 50%;
         height: 50px;
+    }
+
+    .circle-1,
+    .circle-2,
+    .circle-3 {
+        display: none;
+    }
+
+    #discover,
+    #join {
+        flex-direction: column;
+    }
+
+    #discover section {
+        width: 80%;
+        text-align: center;
+    }
+
+    section.covers {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    section.covers img {
+        width: 80%;
+    }
+
+    .cards {
+        display: flex;
+        justify-content: space-around;
+        margin: 0;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .card {
+        background-color: #202027;
+        width: 25%;
+        height: inherit;
+        text-align: center;
+        border: none;
+        padding: 20px 20px 0;
+        margin: 20px;
+    }
+
+    .card img {
+        width: 60%;
+        margin: 0px;
+    }
+
+    #join {
+        padding-top: 0;
+    }
+
+    #join h1 {
+        margin: 0;
+    }
+
+    .form {
+        width: 80%;
+    }
+
+    form {
+        font-size: 18px;
+        padding: 20px 30px;
+    }
+
+    form input {
+        height: 50px;
+        margin-bottom: 20px;
+    }
+
+    form label {
+        margin-bottom: 20px;
+    }
+
+    #join .submit {
+        width: 30%;
+        height: 40px;
+        margin-top: 20px;
+    }
+
+    #landing,
+    #discover {
+        display: none;
+    }
+
+    #mobileMenu {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 767px) {
+
+    h1 {
+        font-size: 2.5em;
+    }
+
+    h3 {
+        font-size: 1.5em;
+    }
+
+    p {
+        font-size: 1.5em;
+    }
+
+    .submit {
+        width: 100%;
+    }
+
+    .circle-1,
+    .circle-2,
+    .circle-3 {
+        display: none;
     }
 
     #discover,
@@ -314,9 +545,11 @@ footer {
         flex-direction: column;
         align-items: center;
         justify-content: center;
+        min-width: 400px;
     }
 
     #discover section {
+        min-width: 300px;
         width: 100%;
         text-align: center;
     }
@@ -332,55 +565,31 @@ footer {
     }
 
     .cards {
-        display: flex;
         flex-direction: column;
-        justify-content: space-around;
-        margin: 0;
-        justify-content: center;
-        align-items: center;
     }
 
     .card {
-        background-color: #202027;
         width: 30%;
-        height: inherit;
-        text-align: center;
-        border: none;
-        padding: 20px 20px 0;
-        margin: 20px;
-    }
-
-    .card img {
-        width: 80%;
-        margin: 0px;
+        max-height: 100%;
     }
 
     .form {
-        width: 100%;
-    }
-
-    form {
-        font-size: 18px;
-        padding: 20px 30px;
+        width: 90%;
     }
 
     form input {
         height: 30px;
-        margin-bottom: 20px;
-    }
-
-    form label {
-        margin-bottom: 20px;
     }
 
     #join .submit {
         width: 100%;
-        height: 40px;
-        margin-top: 20px;
     }
 
-    #join h1 {
-        font-weight: bold;
-        margin-top: 50px;
+    footer {
+        flex-wrap: wrap;
+    }
+
+    footer a {
+        font-size: 18px;
     }
 }
