@@ -11,20 +11,20 @@
 <body>
     <header>
         <nav>
-            <a href="#landing" class="logo">
+            <a href="#landing" class="logo" onclick="showDiv('landing')">
                 <img id="logo" src="images/soundwave-logo.png" alt="soundwave logo">
                 <p>Soundwave</p>
             </a>
             <div class="navigation">
                 <ul>
                     <li class="menuLink">
-                        <a href="#discover">Discover</a>
+                        <a href="#discover" onclick="showDiv('discover')">Discover</a>
 
                     </li>
                     <li class="menuLink">
-                        <a href="#join">Join</a>
+                        <a href="#join" onclick="showDiv('join')">Join</a>
                     </li>
-                    <li class="hamburguerMenu" id="mobileIcon" onclick="myFunction()">
+                    <li class="hamburguerMenu" id="mobileIcon" onclick="showMobileMenu('mobileMenu')">
                         <div class="linea" id="linea-1"></div>
                         <div class="linea" id="linea-2"></div>
                         <div class="linea" id="linea-3"></div>
@@ -35,10 +35,10 @@
         <div class="mobile-menu">
             <ul id="mobileMenu">
                 <li class="mobileLink">
-                    <a href="#discover">Discover</a>
+                    <a href="#discover" onclick="showDiv('discover')">Discover</a>
                 </li>
                 <li class="mobileLink">
-                    <a href="#join">Join</a>
+                    <a href="#join" onclick="showDiv('join')">Join</a>
                 </li>
             </ul>
         </div>
@@ -101,7 +101,7 @@
 
     </main>
 
-    <footer>
+    <footer id="footer">
         <div>
             <a href="">About us</a>
             <a href="">Contact</a>
