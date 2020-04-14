@@ -41,7 +41,7 @@ p {
 }
 
 header {
-    max-width: 100%;
+    width: 100%;
 }
 
 nav {
@@ -328,7 +328,7 @@ ul#mobileMenu {
     }
 
     header {
-        max-width: 100%;
+        width: 100%;
         padding: 30px 10%;
     }
 
