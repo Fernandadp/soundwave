@@ -274,6 +274,7 @@ ul#mobileMenu {
 
     #discover,
     #join {
+        height: auto;
         flex-direction: column;
         align-items: center;
     }
@@ -396,11 +397,8 @@ ul#mobileMenu {
         align-items: center;
         padding: 50px 20px;
         margin: 0;
-    }
-    
-    #landing {
         height: auto;
-    } 
+    }
 
     #landing img {
         max-width: 60%;
