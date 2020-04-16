@@ -40,10 +40,6 @@ p {
     font-size: 30px;
 }
 
-header {
-    width: 100%;
-}
-
 nav {
     display: flex;
     justify-content: space-between;
@@ -328,7 +324,6 @@ ul#mobileMenu {
     }
 
     header {
-        width: 100%;
         padding: 30px 10%;
     }
 
@@ -399,10 +394,13 @@ ul#mobileMenu {
         flex-direction: column-reverse;
         justify-content: space-between;
         align-items: center;
-        height: auto;
         padding: 50px 20px;
         margin: 0;
     }
+    
+    #landing {
+        height: auto;
+    } 
 
     #landing img {
         max-width: 60%;
